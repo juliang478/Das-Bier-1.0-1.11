@@ -2,6 +2,7 @@ package com.galvanizer6.dasbier;
 
 import org.apache.logging.log4j.Logger;
 
+import com.galvanizer6.dasbier.init.ModItems;
 import com.galvanizer6.dasbier.proxy.CommonProxy;
 
 import net.minecraftforge.fml.common.Mod;
@@ -27,6 +28,8 @@ public class DasBierMain
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		proxy.preInit(event);
+		ModItems.init();
+		ModItems.register();
 	}	
 	
     @EventHandler
